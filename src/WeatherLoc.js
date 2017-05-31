@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 
-class Weather_loc extends Component{
+class WeatherLoc extends Component{
      state={
-        user:{
+        location:{
             id:'',
         }
     }
@@ -13,9 +13,10 @@ class Weather_loc extends Component{
     }
 
     fetchUserData=(props)=>{
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.props.match.params.username}&APPID=d1914dc8516531ee2eb4ffd229333af5`)
-        .then(response=>response.json())
+        fetch(`api.openweathermap.org/data/2.5/weather?q=${this.props.match.params.location}&appid=d1914dc8516531ee2eb4ffd229333af5`)
+        //.then(response=>response.json())
         .then(user => this.setState({user}))
+        console.log(this.state)
     }
 
     componentWillReceiveProps(nextProps){
@@ -28,11 +29,11 @@ class Weather_loc extends Component{
     render(){
         const {user}=this.state
         return(
-            <div >
-                <h1>yay</h1>
+            <div>
+                <h2>{this.state.all}</h2>
             </div>
         )
     }
 }
 
-export default Weather_loc
+export default WeatherLoc
