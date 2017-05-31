@@ -1,8 +1,9 @@
-.spotify-logo {
+.Weather-logo {
     margin-top: 30px;
-    max-height: 300px;
+    max-height: 280px;
 }
-.Spotify input {
+
+.Weather input {
     font-family: "Gentium Book Basic", serif;
     box-sizing: border-box;
     width: 80%;
@@ -15,7 +16,7 @@
     border: 1px solid #d1d5da;
 }
 
-.Spotify button {
+.Weather button {
     color: white;
     margin-top: 10px;
     width: 80%;
